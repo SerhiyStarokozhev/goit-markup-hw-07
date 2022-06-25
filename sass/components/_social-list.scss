@@ -1,0 +1,35 @@
+.social__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @extend %list;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 10px;
+  transition: border-color var(--time-animation) var(--cubic-bezier),
+    fill var(--time-animation) var(--cubic-bezier);
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  fill: var(--icon-color);
+  background-color: var(--icon-bg-color);
+  transition: fill var(--time-animation) var(--cubic-bezier),
+    background-color var(--time-animation) var(--cubic-bezier);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    fill: var(--primary-bg-color);
+  }
+}
+
+.social__icon {
+  width: 20px;
+  height: 20px;
+}

@@ -1,0 +1,56 @@
+.nav {
+  display: flex;
+  align-items: center;
+  color: var(--title-text-color);
+
+  .current {
+    color: var(--accent-color);
+
+    &::after {
+      content: ' ';
+      background-color: var(--accent-color);
+      height: 4px;
+      width: 100%;
+      border-radius: 2px;
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+    }
+  }
+}
+
+.nav__list {
+  display: flex;
+  @extend %list;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 50px;
+  position: relative;
+}
+
+.contact {
+  display: flex;
+  margin-left: auto;
+  @extend %list;
+}
+
+.contact__list:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contact__icon {
+  display: block;
+  margin-right: 10px;
+  fill: currentColor;
+
+  &.mail {
+    width: 16px;
+    height: 14px;
+  }
+
+  &.phone {
+    width: 10px;
+    height: 16px;
+  }
+}
